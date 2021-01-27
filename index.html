@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Library Managment System | Login</title>
+    <link rel="icon" href="IMG/favicon_icon.png" type="image/png" sizes="16x16">
+    <!-- For Using Styled Icons in Page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!-- Local Styling File -->
+    <link rel="stylesheet" href="CSS/login.css">
+
+    <!-- JS for Login  -->
+    <script src="JS/mainStyle.js" defer></script>
+</head>
+
+<body>
+    <div class="HeadSection">
+        <img src="IMG/favicon_icon.png" alt="Library Logo" width="120px" height="120px">
+        <h1>Library Managment System</h1>
+    </div>
+    <div class="navContainer">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Rules Regulation</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="imgVisualContainer">
+        <button id="previmg" onclick="PrevImg()"><i class="fas fa-chevron-circle-left"></i></i></button>
+        <div class="imgVisual">
+            <img id="PicDisp" src="IMG/MainPageResource/lib1.jfif" alt="Library Pictures" height="550px" width="800px">
+        </div>
+        <button id="nextimg" onclick="NextImg()"><i class="fas fa-chevron-circle-right"></i></button>
+    </div>
+    <div class="LogCntainer">
+        <div id="themeL" class="quote">
+            <h1>Quote</h1>
+            <h2>"The library is inhabited by spirits <br> that come out of the pages at night"</h2>
+        </div>
+        <div id="themeD" class="log">
+            <h1>Get Some Books</h1>
+            <div class="btnContainer">
+
+                <a class="myButton" href="student_login_form.php">Login</a><br>
+                <a class="myButton" href="student_login_form.php">Register</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>Library Managment System</h1>
+        <h2>Done By : Moiz Asad, Abdul Rafay</h2>
+    </div>
+</body>
+
+</html>
