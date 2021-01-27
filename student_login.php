@@ -21,7 +21,6 @@
             
             if(empty($result))
             {
-<<<<<<< HEAD
                 header('location:student_login.php');
             }
             else
@@ -37,16 +36,6 @@
 
                 $_SESSION['login']="yes";
                 
-=======
-                header('location:register_login.php');
-            }
-            else
-            {
-                $sql = "SELECT username FROM student_registration where email='$email' && password='$password'";
-                $result = mysqli_query($con,$sql);
-                $result=mysqli_fetch_assoc($result);
-                $_SESSION['username']=$result['username'];
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
                 header('location:user_panel.php');
             }
         }

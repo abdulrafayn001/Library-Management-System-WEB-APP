@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -13,40 +12,18 @@ body {
 }
 
 .headSection {
-=======
-*
-{
-    margin: 0;
-    padding: 0;
-}
-body 
-{
-    height: 83.4vh;
-}
-.headSection
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     position: relative;
     color: white;
     width: inherit;
     height: 120px;
     background-color: #222831;
 }
-<<<<<<< HEAD
 
 .headSection>h1 {
-=======
-.headSection>h1
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     font-family: 'Courgette', cursive;
     padding-top: 2rem;
     padding-left: 2rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
 .myButton {
     position: absolute;
     right: 0;
@@ -64,37 +41,22 @@ body
     padding: 1rem;
     text-decoration: none;
 }
-<<<<<<< HEAD
 
 .itemContainer {
-=======
-.itemContainer
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     font-family: 'Roboto', sans-serif;
     height: 100%;
     width: inherit;
     display: flex;
 }
-<<<<<<< HEAD
 
 .menuItem {
-=======
-.menuItem
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     color: white;
     width: 270px;
     height: inherit;
     background-color: #222831;
 }
-<<<<<<< HEAD
 
 .menuItem>h3 {
-=======
-.menuItem>h3
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     width: inherit;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -103,26 +65,12 @@ body
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
-<<<<<<< HEAD
 
 .pannel {
     width: 100%;
 }
 
 .menuItems {
-=======
-.pannel
-{
-    width: 100%;
-}
-.pannel>h1
-{
-    margin-top: 10rem;
-    text-align: center;
-}
-.menuItems
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     outline: none;
     font-size: 18px;
     padding: 7px 15px 7px;
@@ -133,34 +81,20 @@ body
     background: transparent;
     color: white;
 }
-<<<<<<< HEAD
 
 .menuItems:hover {
     opacity: 40%;
 }
 
 .collapser {
-=======
-.menuItems:hover
-{
-    opacity: 40%;
-}
-.collapser
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     margin-top: auto;
     margin-bottom: auto;
     background-color: transparent;
     height: 3rem;
     width: 2rem;
 }
-<<<<<<< HEAD
 
 .collapser>button {
-=======
-.collapser>button
-{
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
     outline: none;
     height: inherit;
     width: inherit;
@@ -168,8 +102,4 @@ body
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     background-color: #222831;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0ddd8731d668376313389997b7867475ebdef2f6
