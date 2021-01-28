@@ -101,6 +101,28 @@
                 }); 
             }
         );
+        //-------------->$_SESSIO
+        $(
+            function()
+            {
+                $("#data_container").on("click",".ok",function(enent){
+                    var val2 = $(this).val();
+                    var val1 = $(this).attr("name");
+                    var val3 = "yes";
+                    $.ajax(
+                        {
+                            url:"books_status.php",
+                            type:"POST",
+                            data:{user:val1, book:val2,check:val3},
+                            success:function(response)
+                            {
+                                $("#data_container").html(response);
+                            }
+                        }
+                    )
+                }); 
+            }
+        );
 
         
        
@@ -152,7 +174,28 @@
             }
         );
 
-
+        $(
+            function()
+            {
+                $("#book_status").click(
+                    function()
+                    {
+                        var val3 = "no";
+                        $.ajax(
+                            {
+                                url:"books_status.php",
+                                type:"POST",
+                                data:{check:val3},
+                                success:function(data)
+                                {
+                                    $("#data_container").html(data)
+                                }
+                            }
+                        )
+                    }
+                );
+            }
+        );
         
 
         $(
@@ -287,6 +330,7 @@
             <button id="books" class="menuItems"><i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dashboard</button>
             <button id="change_pasword" class="menuItems"><i class="fas fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change Password</button><br>
             <button id="new_req" class="menuItems"><i class="fas fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Request New Book</button><br>
+            <button id="book_status" class="menuItems"><i class="fas fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Books Status</button><br>
         </div>
         <div class="collapser">
             <button name="hide" id="conatinerHider"><i class="fas fa-caret-right"></i></button>
