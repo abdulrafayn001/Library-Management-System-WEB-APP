@@ -20,7 +20,7 @@ if (!isset($_SESSION['email'])) {
     <!-- JS -->
     <script src="JS/bookrequests.js"></script>
     <script src="JS/usermanager.js"></script>
-    <script src="JS/dashboardloadout.js"></script>
+    <script src="JS/addstudent.js"></script>
     <script src="JS/dashboard.js" defer></script>
     
 

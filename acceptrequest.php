@@ -11,9 +11,8 @@
             }
             else
             {
-
-                $sql_user = "UPDATE book_request set status='approved' where req_id=".$_POST['id'];
-
+                $due = Date('Y/m/d', strtotime("+10 days"));
+                $sql_user = "UPDATE book_request set status='approved',due_date='$due' where req_id=".$_POST['id'];
                 mysqli_query($con, $sql_user);
 
                 $sql_user = "SELECT b.status,b.req_id,s.username,bk.name FROM book_request as b inner join 
@@ -22,12 +21,12 @@
                 $check = mysqli_query($con,$sql_user);
                 if(!empty($check))
                 {
-                    echo "<h2>Issue Books.</h2>";
+                    echo "<h2>Issue Books.</h2><hr>";
                     echo "<table class='info'>
                                         <tr>
                                             <th>Requester's Name</th>
                                             <th>Book Requested</th>
-                                        </tr>'";
+                                        </tr>";
 
                                         while ($data = mysqli_fetch_assoc($check))
                                         {

@@ -11,7 +11,7 @@
             }
             else
             {
-                $sql_user = "SELECT b.request_date,b.status,b.req_id,s.username,bk.name FROM book_request as b inner join 
+                $sql_user = "SELECT b.due_date,b.status,b.req_id,s.username,bk.name FROM book_request as b inner join 
                             student_registration as s on S.id=b.user_id inner join books as bk on bk.id=b.book_id";
 
                 $check = mysqli_query($con,$sql_user);
@@ -20,7 +20,7 @@
                                         <tr>
                                             <th>User's Name</th>
                                             <th>Book Requested</th>
-                                            <th>Book Date</th>
+                                            <th>Due Date</th>
 
                                         </tr>";
 
@@ -31,7 +31,7 @@
                                                 echo '<tr>
                                                  <td>' . $data['username'] . '</td>
                                                  <td>' . $data['name'] . '</td>
-                                                 <td>' . $data['request_date'] . '</td>
+                                                 <td>' . $data['due_date'] . '</td>
                                                  </tr>';
                                             }
                                         }
