@@ -1,7 +1,7 @@
 <?php
 $con = mysqli_connect('localhost', 'root', '', 'Library Management System');
 if ($con) {
-    echo "<h2>Book Requests</h2>";
+    echo "<h2>Book Requests</h2><hr>";
     $sqlQuery = "SELECT * FROM new_book_request";
     $result = mysqli_query($con, $sqlQuery);
     if (!empty($result)) {

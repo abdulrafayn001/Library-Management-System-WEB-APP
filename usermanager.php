@@ -4,6 +4,7 @@
                     $sqlQuery = "SELECT * FROM student_registration";
                     $result = mysqli_query($con, $sqlQuery);
                     if (!empty($result)) {
+                        echo "<h2>User Manager.</h2><hr>";
                         echo '<table>
                             <tr>
                                 <th>Student ID</th>

@@ -10,8 +10,5 @@ echo '
                 <input id="cnp" type="text" name="cnewpswd" placeholder="Confirm New Password"><br>
                 
                 <button style="margin-top:1rem;"name="submit" id="cpswd" class="btnAdd">Change Password</button>
-                
-                
                 ';
-
 ?>

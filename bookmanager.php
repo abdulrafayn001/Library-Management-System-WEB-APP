@@ -18,6 +18,7 @@ if (!isset($_SESSION['email'])) {
     <script src="JS/dashboard.js" defer></script>
     <script src="JS/usermanager.js"></script>
     <script src="JS/addstudent.js"></script>
+
 </head>
 
 <body>
@@ -39,8 +40,8 @@ if (!isset($_SESSION['email'])) {
                 <button class="menuItems"><i class="fas fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manage Books</button><br>
             </form>
 
-            <button class="menuItems"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Books</button><br>
-            <button class="menuItems"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Issued Books</button><br>
+            <button class="menuItems" id="isbook"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Books</button><br>
+            <button class="menuItems" id="showallissued"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Issued Books</button><br>
             <button class="menuItems" id="users"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;Manage Users</button><br>
             <button class="menuItems" id="bookreq"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;Book Requests</button><br>
 
@@ -64,6 +65,7 @@ if (!isset($_SESSION['email'])) {
                     $sqlQuery = "SELECT * FROM books";
                     $result = mysqli_query($con, $sqlQuery);
                     if (!empty($result)) {
+                        echo "<br><br><h2>Manage Books.</h2><hr><br>";
                         echo '<table>
                             <tr>
                                 <th>Book ID</th>

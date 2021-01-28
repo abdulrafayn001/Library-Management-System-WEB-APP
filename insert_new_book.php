@@ -20,13 +20,9 @@
             $check=mysqli_query($con,$sql2);
         }
 
-        
-
-        
-
         $sql2="SELECT *from new_book_request where user_email='".$_SESSION['email']."'";
         $check=mysqli_query($con,$sql2);
-
+        echo "<h2>Insert Books.</h2>";
         echo "
             <div class='all'>
                 <div class='update_password'>

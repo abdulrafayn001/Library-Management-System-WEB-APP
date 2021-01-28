@@ -28,3 +28,69 @@ $(
         });
     }
 );
+$(
+    function () {
+        $("#isbook").click(
+            function () {
+                $.ajax(
+                    {
+                        url: "issuebooks.php",
+                        type: "POST",
+
+                        success: function (data) {
+                            $(".pannel").html(data)
+                        }
+                    }
+                )
+            }
+        );
+    }
+);
+$(
+    function () {
+        $(".pannel").on("click", "#accept", function (event) {
+            var id = $(this).val();
+            $.ajax({
+                url: "acceptrequest.php",
+                type: "POST",
+                data: {id:id},
+                success: function (data) {
+                    $(".pannel").html(data)
+                }
+            })
+        });
+    }
+);
+$(
+    function () {
+        $("#showallissued").click(
+            function () {
+                $.ajax(
+                    {
+                        url: "showissuedbooks.php",
+                        type: "POST",
+
+                        success: function (data) {
+                            $(".pannel").html(data)
+                        }
+                    }
+                )
+            }
+        );
+    }
+);
+$(
+    function () {
+        $(".pannel").on("click", "#reject", function (event) {
+            var id = $(this).val();
+            $.ajax({
+                url: "rejectrequest.php",
+                type: "POST",
+                data: { id: id },
+                success: function (data) {
+                    $(".pannel").html(data)
+                }
+            })
+        });
+    }
+);

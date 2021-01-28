@@ -7,7 +7,7 @@
         $desc = $_POST['bdesc'];
         $qty = $_POST['qty'];
         $cat = $_POST['category'];
-        if(!empty($name) && !empty($desc) && !empty($qty) && isset($cat))
+        if(!empty($name) && !empty($desc) && !empty($qty) && !empty($cat))
         {
             $sqlQuery = "INSERT INTO books(name,description,category,quantity) VALUES ('" . $name . "','" . $desc . "','" . $cat . "'," . $qty . ")";
             $result = mysqli_query($con, $sqlQuery);
@@ -21,6 +21,6 @@
     }
     else
     {
-
+        echo "<h1>Check Your Connection!</h1>";
     }
 ?>

@@ -44,8 +44,8 @@ if (!isset($_SESSION['email'])) {
                 <button class="menuItems"><i class="fas fa-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manage Books</button><br>
             </form>
 
-            <button class="menuItems"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Books</button><br>
-            <button class="menuItems"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Issued Books</button><br>
+            <button class="menuItems" id="isbook"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Books</button><br>
+            <button class="menuItems" id="showallissued"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Issued Books</button><br>
             <button class="menuItems" id="users"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;Manage Users</button><br>
             <button class="menuItems" id="bookreq"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;Book Requests</button><br>
             <form action="profile.php">
@@ -80,6 +80,7 @@ if (!isset($_SESSION['email'])) {
         </script>
         <div class="pannel">
             <?php
+            echo "<h2>Profile Manager.</h2><hr><br><br>";
             echo '
                 <label for="bname">User Name</label><br>
                 <input type="text" name="bname" id="name" value=' . $_SESSION['name'] . '><br>
