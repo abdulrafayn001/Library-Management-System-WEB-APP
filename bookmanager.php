@@ -18,6 +18,7 @@ if (!isset($_SESSION['email'])) {
     <script src="JS/dashboard.js" defer></script>
     <script src="JS/usermanager.js"></script>
     <script src="JS/addstudent.js"></script>
+    <script src="JS/searchbook.js"></script>
 
 </head>
 
@@ -53,10 +54,10 @@ if (!isset($_SESSION['email'])) {
             <button name="hide" id="conatinerHider"><i class="fas fa-caret-right"></i></button>
         </div>
         <div class="pannel">
-            <div style="width:inherit; display: flex; margin-top:3rem; justify-content:flex-end; ">
+            <div style="width:inherit; display: flex; margin-top:2rem; justify-content:flex-end; ">
                 <input type="text" id="name" placeholder="Enter Book Title">&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" id="cat" placeholder="Enter Category">&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btnAdd" id="search" name="search">Search</button>
+                <button class="btnAdd" id="search">Search</button>
             </div>
             <div id="searchpannel" style="width: inherit;">
                 <?php

@@ -1,0 +1,31 @@
+.carding
+{
+    display: flex;
+    justify-content: center;
+}
+.cardcontainer
+{
+    width: 150px;
+    height: 150px;
+    color: white;
+    border-radius: 10%;
+    background-color: #222831;
+    position: relative;
+}
+.cardcontainer>p
+{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: inherit;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #276678;
+}
+.cardcontainer>div>h2
+{
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    font-size: 85px;
+}
