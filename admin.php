@@ -24,7 +24,6 @@ if (!isset($_SESSION['email'])) {
     <script src="JS/addstudent.js"></script>
     <script src="JS/dashboard.js" defer></script>
 
-
 </head>
 
 <body>
@@ -128,9 +127,38 @@ if (!isset($_SESSION['email'])) {
                     </div>
                     <p>Issued Books</p>
                 </div>
-            </div><br><br><hr>
-            <div class="Totalfine">
-                
+            </div><br><br>
+            <hr>
+            <div class="Show">
+                <?php
+                $con = mysqli_connect('localhost', 'root', '', 'Library Management System');
+                if ($con) {
+                    $sqlQuery = "SELECT * FROM admins";
+                    $result = mysqli_query($con, $sqlQuery);
+                    if (!empty($result)) {
+                        echo "<br><br><h2>Other Admins.</h2><hr>";
+                        echo '<table style="width: 100%;">
+                            <tr>
+                                <th>Admin ID</th>
+                                <th>Admin Name</th>
+                                <th>Admin Email</th>
+                            </tr>';
+                        while ($info = mysqli_fetch_assoc($result)) {
+                            echo '<tr>
+                                <td>' . $info['id'] . '</td>
+                                <td>' . $info['username'] . '</td>
+                                <td>' . $info['email'] . '</td>
+                                </tr>';
+                        }
+                        echo '</table>';
+                    } else {
+                        echo "<h1>No Books Record Exists!</h1>";
+                    }
+                } else {
+                    "<h1>Database Connection Error</h1>";
+                }
+                mysqli_close($con);
+                ?>
             </div>
         </div>
     </div>
