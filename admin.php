@@ -129,7 +129,7 @@ if (!isset($_SESSION['email'])) {
                 </div>
             </div><br><br>
             <hr>
-            <div class="Show">
+            <div>
                 <?php
                 $con = mysqli_connect('localhost', 'root', '', 'Library Management System');
                 if ($con) {
@@ -144,7 +144,6 @@ if (!isset($_SESSION['email'])) {
                                 <th>Admin Email</th>
                             </tr>';
                         while ($info = mysqli_fetch_assoc($result)) {
-
                             if($_SESSION['email']!=$info['email'])
                             {
                                 echo '<tr>

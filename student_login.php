@@ -18,7 +18,7 @@
             $result = mysqli_query($con,$sql);
             $result=mysqli_fetch_assoc($result);
 
-
+            
             if(empty($result))
             {
                 header('location:student_login_form.php');
@@ -34,7 +34,7 @@
                 $_SESSION['username']=$result['username'];
                 $_SESSION['email']=$result['email'];
 
-                $_SESSION['login']="yes";
+                // $_SESSION['login']="yes";
                 
                 header('location:user_panel.php');
             }

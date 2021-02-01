@@ -21,7 +21,7 @@ if ($con) {
                         <td>' . $info['user_email'] . '</td>
                         <td>' . $info['book_name'] . '</td>
                         <td>' . $info['date'] . '</td>
-                        <td>' . $info['url'] . '</td>
+                        <td><a href='.$info['url'].'>link</a></td>
                         <td>' . $info['student_name'] . '</td>
                         <td>' . $info['note'] . '</td>
                     </tr>';
