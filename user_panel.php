@@ -64,12 +64,13 @@
                 $("#data_container").on("click","#changePassword",function(enent){
                     var val1 = $('#new_one').val();
                     var val2 = $('#confirm_new_one').val();
+                    var val4 = $('#op').val();
                     var val3 = "yes";
                     $.ajax(
                         {
                             url:"student_password_change.php",
                             type:"POST",
-                            data:{new_one:val1, confirm_new_one:val2,isCheck:val3},
+                            data:{new_one:val1, confirm_new_one:val2,isCheck:val3, old_pas:val4},
                             success:function(response)
                             {
                                 $("#data_container").html(response);
@@ -247,8 +248,9 @@
         .update_password {
             margin-top: 40px;
             padding: 5%;
-            background-color: lightgoldenrodyellow;
+            background-color: #654062;
             text-align: right;
+            border-radius:30px;
             }
 
         input {
@@ -304,7 +306,7 @@
             margin-bottom:10px;
         }
 
-        #searching,#req{
+        #searching{
             outline: none;
             background: linear-gradient(to bottom, #f0be48 5%, #ffd369 100%);
             background-color: #ffd369;

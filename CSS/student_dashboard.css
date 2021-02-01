@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: darkgray;
+    background-color: linen;
     height: 100vh;
 }
 
@@ -135,6 +135,36 @@ table tr.active-row {
     color: #654062;
 }
 
+.new_request {
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #654062;
+    border-radius: 30px;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin: 20px;
+}
+
+#req_book_name,
+#new_book_url {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
 .request,
 .ok {
     outline: none;
@@ -148,4 +178,27 @@ table tr.active-row {
     font-weight: bold;
     padding: 5px;
     text-decoration: none;
+}
+
+.pas {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#req {
+    outline: none;
+    background: linear-gradient(to bottom, #f0be48 5%, #ffd369 100%);
+    background-color: #ffd369;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 25px;
+    width: 150px;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    color: #654062;
 }

@@ -13,18 +13,16 @@
 
         echo "
             <div class='all'>
-                <div class='update_password'>
-                <hr>
-                <label for='req_new_book'>Book Name </label>
-                <input type='text' name='book' id='req_book_name'>
-                <br>
-                <label for='book_url'>url</label>
-                <input id='new_book_url' type='text' name='book_url' placeholder='Book URL if any' id='req_book_url'>
-                <br>
-                <label for='note'>Note:</label>
-
-                <textarea id='req_note' name='note' rows='4' cols='50' maxlength='100'></textarea>
-                <hr>
+                <div class='new_request'>
+                    <div class='size_change'>
+                        
+                        <input type='text' name='book' id='req_book_name' placeholder='Book Name'>
+                        
+                        <input id='new_book_url' type='text' name='book_url' placeholder='Book URL if any' >
+                        
+                        <textarea id='req_note' name='note' rows='4' cols='50' maxlength='100' placeholder='Note...'></textarea>
+                        
+                    </div>
                 <button id='req'> Submit </button>
             </div>
 

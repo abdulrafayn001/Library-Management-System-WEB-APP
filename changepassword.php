@@ -3,7 +3,7 @@
         if(!empty($_POST['newpswd']) && !empty($_POST['cnewpswd']) && !empty($_POST['oldpswd']))
         {
 
-            if (strlen($_POST['newpswd']) > 8) {
+            if (strlen( $_POST['newpswd']) > 8) {
                 if ($_POST['newpswd'] == $_POST['cnewpswd']) {
                     $coonectionString = mysqli_connect('localhost', 'root', '', 'Library Management System');
                     $new_one = mysqli_real_escape_string($coonectionString, $_POST['newpswd']);
