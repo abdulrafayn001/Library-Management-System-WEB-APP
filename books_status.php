@@ -73,19 +73,21 @@
                                                 
                                                 if(!empty($data['issued_date']) && !empty($data['due_date']))
                                                 {
-                                                    $due=fetchDate($data['due_date'],'-');
-                                                    $curr=fetchDate(date("Y-m-d"),'-');
-                                                    if($curr-$due>0)
+                                                    $due=fetchDate($data['due_date'],'/');
+                                                    $curr=fetchDate(Date('Y/m/d'),'/');
+                                                    // $curr=12;
+                                                    // echo $due."   ".$curr."<br>";
+                                                    if((($curr%30)-$due)*-1>0)
                                                     {
-                                                        echo '<td>' . $curr-$due . '</td>';
+                                                        echo '<td>' . (($curr%30)-$due)*-1 . '</td>';
                                                     }
                                                     else
                                                     {
                                                         echo '<td>Exceeded</td>';
                                                     }
-                                                    if($curr-$due<0)
+                                                    if((($curr%30)-$due)*-1<0)
                                                     {
-                                                        $fine=($curr-$due)*-50;
+                                                        $fine=((($curr%30)-$due)*-1)*-50;
                                                         echo '<td>' . $fine . '</td>';
                                                     }
                                                     else

@@ -11,8 +11,15 @@
             }
             else
             {
+                $sql_book_id = "SELECT book_id FROM book_request where req_id=".$_POST['id'];
+                $data = mysqli_fetch_assoc(mysqli_query($con, $sql_book_id));
+
+                $sql_user = "UPDATE books set quantity=quantity-1 ,borrowed=borrowed+1 where id=".$data['book_id'];
+                mysqli_query($con, $sql_user);
+
+                $current=Date('Y/m/d');
                 $due = Date('Y/m/d', strtotime("+10 days"));
-                $sql_user = "UPDATE book_request set status='approved',due_date='$due' where req_id=".$_POST['id'];
+                $sql_user = "UPDATE book_request set status='approved',due_date='$due', issued_date='$current' where req_id=".$_POST['id'];
                 mysqli_query($con, $sql_user);
 
                 $sql_user = "SELECT b.status,b.req_id,s.username,bk.name FROM book_request as b inner join 
