@@ -39,7 +39,7 @@
             $re = mysqli_query($con, $sqli);
             $y = mysqli_fetch_assoc($re);
             
-            if($y['quantity']!=$y['borrowed'])
+            if($y['quantity']!=0)//
             {
                 $sql="SELECT *from book_request where user_id= ".$data['id']." and book_id= ".$_POST['book_id']."";
                 $res = mysqli_query($con, $sql);
@@ -87,8 +87,6 @@
                                     <td>' . $data['quantity'] . '</td>
                                     <td>' . $data['borrowed'] . '</td>
                                     <td>
-                                        <input type="text" class="book_id" value=' . $data['id'] . ' hidden>
-                                        <input type="text" class="user_email" value=' . $_SESSION['email'] . ' hidden>
                                         <button class="request" name=' . $data['id'] . ' value=' . $_SESSION['email'] . '>Request</button>
                                         </form>
                                     </td>

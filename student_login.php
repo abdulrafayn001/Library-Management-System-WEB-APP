@@ -21,7 +21,7 @@
             
             if(empty($result))
             {
-                header('location:student_login.php');
+                header('location:student_login_form.php');
             }
             else
             {
@@ -34,7 +34,7 @@
                 $_SESSION['username']=$result['username'];
                 $_SESSION['email']=$result['email'];
 
-                $_SESSION['login']="yes";
+                // $_SESSION['login']="yes";
                 
                 header('location:user_panel.php');
             }

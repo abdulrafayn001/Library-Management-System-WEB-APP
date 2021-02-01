@@ -277,15 +277,15 @@
         }
         .pannel
         {
-            margin-top:20px;
+            background-color: linen;
+            height:100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: scroll;
         }
         .all {
-            height:85vh;
-            margin-top:20px;
-            margin-right:20px;
+            height:inherit;
             padding:20px;
             background-color: linen;
             text-align:center;

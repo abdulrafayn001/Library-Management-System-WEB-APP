@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 83.4vh;
+    height: 100vh;
 }
 
 .headSection {
@@ -22,6 +22,7 @@ body {
     padding-top: 2rem;
     padding-left: 2rem;
 }
+
 .myButton {
     position: absolute;
     right: 0;

@@ -144,11 +144,14 @@ if (!isset($_SESSION['email'])) {
                                 <th>Admin Email</th>
                             </tr>';
                         while ($info = mysqli_fetch_assoc($result)) {
-                            echo '<tr>
+                            if($_SESSION['email']!=$info['email'])
+                            {
+                                echo '<tr>
                                 <td>' . $info['id'] . '</td>
                                 <td>' . $info['username'] . '</td>
                                 <td>' . $info['email'] . '</td>
                                 </tr>';
+                            }
                         }
                         echo '</table>';
                     } else {
