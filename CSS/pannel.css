@@ -1,10 +1,9 @@
-.carding
-{
+.carding {
     display: flex;
     justify-content: center;
 }
-.cardcontainer
-{
+
+.cardcontainer {
     width: 150px;
     height: 150px;
     color: white;
@@ -12,8 +11,8 @@
     background-color: #222831;
     position: relative;
 }
-.cardcontainer>p
-{
+
+.cardcontainer>p {
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -22,8 +21,8 @@
     padding-bottom: 5px;
     background-color: #276678;
 }
-.cardcontainer>div>h2
-{
+
+.cardcontainer>div>h2 {
     width: 150px;
     height: 120px;
     text-align: center;

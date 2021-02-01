@@ -18,6 +18,8 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="CSS/bookmanager_pannel.css">
     <link rel="stylesheet" href="CSS/pannel.css">
 
+    
+
     <!-- JS -->
     <script src="JS/bookrequests.js"></script>
     <script src="JS/usermanager.js"></script>

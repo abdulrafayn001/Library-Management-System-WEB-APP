@@ -285,6 +285,7 @@
             overflow: scroll;
         }
         .all {
+            margin:0;
             height:inherit;
             padding:20px;
             background-color: linen;
@@ -365,10 +366,19 @@
                                         <th>Borrowed</th>
                                         <th></th>
                                     </tr>';
+                                    $i=0;
                                         while ($data = mysqli_fetch_assoc($check))
                                         {
-                                            echo '<tr>
-                                                <td>' . $data['id'] . '</td>
+                                            if($i%2==0)
+                                            {
+                                                echo '<tr class="body">';
+                                            }
+                                            else
+                                            {
+                                                echo '<tr class="active-row">';
+                                            }
+
+                                                echo'<td>' . $data['id'] . '</td>
                                                 <td>' . $data['name'] . '</td>
                                                 <td>' . $data['description'] . '</td>
                                                 <td>' . $data['category'] . '</td>
@@ -380,6 +390,7 @@
                                                 <button class="request" name=' . $data['id'] . ' value=' . $_SESSION['email'] . '>Request</button>
                                                 </form></td>
                                                 </tr>';
+                                                $i=$i+1;
                                         }
                                     echo '</table>';
                                 }
