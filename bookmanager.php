@@ -75,20 +75,32 @@ if (!isset($_SESSION['email'])) {
                                 <th>Book Qty Available</th>
                                 <th>Book Category</th>
                                 <th>Books Borrowed</th>
+                                <th></th>
                             </tr>';
-                        while ($info = mysqli_fetch_assoc($result)) {
-                            echo '<tr>
+                            $i=0;
+                        while ($info = mysqli_fetch_assoc($result)) 
+                        {
+                            if($i%2==0)
+                            {
+                                echo '<tr class="body">';
+                            }
+                            else
+                            {
+                                echo '<tr class="active-row">';
+                            }
+                            echo '
                                 <td>' . $info['id'] . '</td>
                                 <td>' . $info['name'] . '</td>
                                 <td>' . $info['description'] . '</td>
                                 <td>' . $info['quantity'] . '</td>
                                 <td>' . $info['category'] . '</td>
                                 <td>' . $info['borrowed'] . '</td>
-                                <th><form action="deletebookrec.php" method="POST">
+                                <td><form action="deletebookrec.php" method="POST">
                                 <input type="hidden" name="id" value=' . $info['id'] . '>
-                                <button type="submit" name="rmRec">DELETE</button>
-                                </form></th>
+                                <button class="del" type="submit" name="rmRec">DELETE</button>
+                                </form></td>
                                 </tr>';
+                                $i=$i+1;
                         }
                         echo '</table>';
                     } else {

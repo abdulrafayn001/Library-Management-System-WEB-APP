@@ -11,35 +11,41 @@ body {
     margin-top: 10rem;
     text-align: center;
 }
-        table {
-            width: inherit;
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 0.9em;
-            font-family: sans-serif;
-            min-width: 400px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        }
 
-        table tr th {
-            background-color: #654062;
-            color: #ffffff;
-            text-align: left;
-        }
+table {
+    width: inherit;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
-        table th,
-        table td {
-            padding: 12px 15px;
-        }
+table tr th {
+    background-color: #654062;
+    color: #ffffff;
+    text-align: left;
+}
 
-        table tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }
+table th,
+table td {
+    padding: 12px 15px;
+}
 
-        table tr.active-row {
-            font-weight: bold;
-            color: #654062;
-        }
+table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tr.active-row {
+    font-weight: bold;
+    color: #654062;
+}
+
+table tr.active-row {
+    font-weight: bold;
+    color: #654062;
+}
 
 .pannel {
     padding: 3rem 5rem 0;
@@ -62,7 +68,10 @@ input[type=text] {
     justify-content: center;
 }
 
-.btnAdd {
+.btnAdd,
+.del,
+#accept,
+#reject {
     box-shadow: inset 0px 1px 3px 0px #276873;
     background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
     background-color: #599bb3;
@@ -79,7 +88,10 @@ input[type=text] {
     text-shadow: 0px -1px 0px #3d768a;
 }
 
-.btnAdd:hover {
+.btnAdd:hover,
+.del:hover,
+#accept:hover,
+#reject:hover {
     background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
     background-color: #408c99;
 }

@@ -10,16 +10,17 @@
                                 <th>Student ID</th>
                                 <th>Username</th>
                                 <th>Email</th>
+                                <th></th>
                             </tr>';
                         while ($info = mysqli_fetch_assoc($result)) {
                             echo '<tr>
                                 <td>' . $info['id'] . '</td>
                                 <td>' . $info['username'] . '</td>
                                 <td>' . $info['email'] . '</td>
-                                <th><form action="deletestd.php" method="POST">
+                                <td style="text-align:center;"><form action="deletestd.php" method="POST">
                                 <input type="hidden" name="id" value=' . $info['id'] . ' >
-                                <button type="submit" name="rmRec">DELETE</button>
-                                </form></th>
+                                <button class="del" type="submit" name="rmRec">DELETE</button>
+                                </form></td>
                                 </tr>';
                             }
                         echo '</table>';

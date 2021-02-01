@@ -105,18 +105,8 @@ body {
     background-color: #222831;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    padding: 5px;
-}
-
 table {
-    border-collapse: collapse;
-}
-
-.info {
+    width: inherit;
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -125,22 +115,22 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.info tr th {
+table tr th {
     background-color: #654062;
     color: #ffffff;
     text-align: left;
 }
 
-.info th,
-.info td {
+table th,
+table td {
     padding: 12px 15px;
 }
 
-.info tr:nth-of-type(even) {
+table tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.info tr.active-row {
+table tr.active-row {
     font-weight: bold;
     color: #654062;
 }

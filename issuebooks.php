@@ -17,26 +17,26 @@
                 $check = mysqli_query($con,$sql_user);
                 echo "<h2>Issue Books.</h2><hr>";
                 echo "<table class='info'>
-                                        <tr>
-                                            <th>Requester's Name</th>
-                                            <th>Book Requested</th>
-                                            <th>Accept</th>
-                                            <th>Reject</th>
-                                        </tr>";
+                <tr>
+                    <th>Requester's Name</th>
+                    <th>Book Requested</th>
+                    <th>Accept</th>
+                    <th>Reject</th>
+                </tr>";
 
-                                        while ($data = mysqli_fetch_assoc($check))
-                                        {
-                                            if($data['status'] == "pending")
-                                            {
-                                                echo '<tr>
-                                                 <td>' . $data['username'] . '</td>
-                                                 <td>' . $data['name'] . '</td>
-                                                 <td><button id="accept" value=' . $data['req_id'] . '>Accept</button></td>
-                                                 <td><button id="reject" value=' . $data['req_id'] . '>Reject</button></td>
-                                                 </tr>';
-                                            }
-                                        }
-                                        echo '</table>';
+                while ($data = mysqli_fetch_assoc($check))
+                {
+                    if($data['status'] == "pending")
+                    {
+                        echo '<tr>
+                            <td>' . $data['username'] . '</td>
+                            <td>' . $data['name'] . '</td>
+                            <td><button id="accept" value=' . $data['req_id'] . '>Accept</button></td>
+                            <td><button id="reject" value=' . $data['req_id'] . '>Reject</button></td>
+                            </tr>';
+                    }
+                }
+                echo '</table>';
             }
     }
 
