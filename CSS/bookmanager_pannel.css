@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     background-color: white;
 }
@@ -17,7 +19,7 @@ table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }

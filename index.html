@@ -7,19 +7,21 @@
     <!-- For Using Styled Icons in Page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- Local Styling File -->
-    <link rel="stylesheet" href="CSS/login.css">
-
+    <link rel="stylesheet" href="CSS/login.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <!-- JS for Login  -->
     <script src="JS/mainStyle.js" defer></script>
 </head>
 
 <body>
-    <div class="HeadSection">
-        <img src="IMG/favicon_icon.png" alt="Library Logo" width="120px" height="120px">
+    <div class="HeadSection" style="background-color: #94d3ac; color: #655c56;">
+        <img src="IMG/library.png" alt="Library Logo" width="120px" height="120px">
         <h1>Library Managment System</h1>
     </div>
-    <div class="navContainer">
+    <div class="navContainer" style="background-color: #655c56;">
         <ul>
+            <li><a href="termscond.html">Terms and Condition</a></li>
+            <li><a href="PrivPolicy.html">Privacy Policy</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="index.html">Home</a></li>
         </ul>
@@ -27,7 +29,7 @@
     <div class="imgVisualContainer">
         <button id="previmg" onclick="PrevImg()"><i class="fas fa-chevron-circle-left"></i></i></button>
         <div class="imgVisual">
-            <img id="PicDisp" src="IMG/MainPageResource/lib1.jfif" alt="Library Pictures" height="550px" width="800px">
+            <img id="PicDisp" src="IMG/MainPageResource/lib1.jfif" alt="Library Pictures" height="650px" width="900px">
         </div>
         <button id="nextimg" onclick="NextImg()"><i class="fas fa-chevron-circle-right"></i></button>
     </div>
@@ -47,10 +49,38 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <h1>Library Managment System</h1>
-        <h2>Done By : Moiz Asad, Abdul Rafay</h2>
-    </div>
 </body>
+<footer class="site-footer">
+    <div class="container">
+        <div class="abt">
+            <h2>About</h2><br>
+            <hr><br>
+            <p class="ft">Library Management System is a Web Application that is used to manage and store the details of
+                books and the users. In
+                this Web Application, we have two types of users, admin, and students. Students can register and log in.
+                After
+                successful login, a student can see all the available books in the library. Students can also search
+                books by their name
+                and category. <a href="about.html">Read More</a></p>
+        </div>
+
+        <div class="linking">
+            <h2>Quick Links</h2><br>
+            <hr><br>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="PrivPolicy.html">Privacy Policy</a></li>
+                <li><a href="termscond.html">Terms And Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <hr><br>
+    <div class="cc">
+        <h4>All Rights Reserved | Copyright</h4>
+    </div><br>
+    <hr>
+</footer>
 
 </html>

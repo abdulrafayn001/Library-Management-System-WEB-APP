@@ -1,0 +1,51 @@
+.site-footer
+{
+  background-color:#655c56;    
+}
+.container
+{
+  margin-top: 3rem;
+  color: white;
+  display: flex;
+  padding:45px 0 20px;
+  font-size:15px;
+}
+.abt
+{
+    margin-left: 5rem;
+    width: 50%;
+    margin-right: 5rem;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    
+}
+.linking
+{
+    width: 50%;
+    margin-right: 3rem;
+}
+ul>li
+{
+    margin: 1rem;
+    list-style-type: none;
+}
+ul>li:hover
+{
+    font-size: large;
+    margin-left: 2rem;
+}
+.ft
+{
+    word-spacing: 3px;
+    font-size: 20px;
+}
+.cc
+{
+    width: inherit;
+    text-align: center;
+    color: white;
+}

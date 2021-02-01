@@ -4,35 +4,39 @@
     margin: 0%;
     padding: 0%;
 }
-
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #effcef;
+}
 .HeadSection {
-    font-family: 'Courgette', cursive;
+    font-family: 'Cinzel', serif;
     font-size: large;
     color: white;
     display: flex;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
     padding: 3rem;
     width: inherit;
     height: 130px;
-    background-color: #222831;
 }
 
 .HeadSection>img {
-    background-color: white;
-    border-radius: 30%;
+    width: 200px;
+    height: 170px;
+    border-radius: 20%;
     padding: 10px;
 }
 
 .HeadSection>h1 {
     margin-left: 5rem;
-    margin-top: 2.3rem;
 }
 
 .navContainer {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     text-align: right;
-    height: 50px;
+    height: 55px;
     background-color: #393e46;
 }
 
@@ -43,20 +47,22 @@
 
 .navContainer>ul>li {
     float: right;
+    height: inherit;
 }
 
 .navContainer>ul>li>a {
     outline: none;
-    display: block;
     color: white;
+    height: inherit;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .navContainer>ul>li>a:hover {
-    color: #393e46;
-    background-color: #ffd369;
+    color: black;
+    height: inherit;
+    background-color: #94d3ac;
 }
 
 .imgVisualContainer {
@@ -94,27 +100,24 @@
 .log>h1 {
     text-decoration: underline;
     padding: 3.5rem;
-    font-family: 'Courgette', cursive;
 }
 
 .quote {
     text-align: center;
     width: 50%;
     background-color: white;
-    font-family: 'Roboto', sans-serif;
 }
 
 .log {
-    color: white;
+    color: black;
     text-align: center;
-    background-color: #222831;
+    background-color: #94d3ac;
     width: 50%;
 }
 
 .myButton {
     outline: none;
-    background: linear-gradient(to bottom, #f0be48 5%, #ffd369 100%);
-    background-color: #ffd369;
+    background-color: #655c56;
     border-radius: 8px;
     display: inline-block;
     cursor: pointer;
@@ -130,15 +133,13 @@
 .logS>h1 {
     text-decoration: underline;
     padding: 3.5rem;
-    font-family: 'Courgette', cursive;
 }
 
 .quoteS {
     text-align: center;
     width: 50%;
-    background-color: #222831;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    background-color: #94d3ac;
+    color: black;
 }
 
 .logS {
@@ -148,20 +149,8 @@
     width: 50%;
 }
 
-.footer {
-    margin-top: 6rem;
-    width: inherit;
-    height: 80px;
-    padding: 4rem;
-    text-align: center;
-    background-color: #222831;
-    color: white;
-    font-family: 'Courgette', cursive;
-}
-
 .footer>h2 {
     padding-top: 2rem;
-    font-family: 'Roboto', sans-serif;
 }
 
 .btnContainer {
