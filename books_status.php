@@ -36,7 +36,7 @@
             {
                 echo "
                 <div class='all'>
-                <h1>Book Status</h1>
+                <h1 style='margin-top: 25px;'>Book Status</h1>
                             <div id='info_table'>
                                 <table class='info'>
                                     <tr>

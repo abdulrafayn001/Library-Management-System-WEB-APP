@@ -28,11 +28,20 @@
                                             <th>Category</th>
                                             <th>Qty</th>
                                             <th>Borrowed</th>
+                                            <th></th>
                                         </tr>'";
-
+                                        $i=0;
                                         while ($data = mysqli_fetch_assoc($check))
                                         {
-                                            echo '<tr>
+                                            if($i%2==0)
+                                            {
+                                                echo '<tr class="body">';
+                                            }
+                                            else
+                                            {
+                                                echo '<tr class="active-row">';
+                                            }
+                                            echo '
                                                 <td>' . $data['id'] . '</td>
                                                 <td>' . $data['name'] . '</td>
                                                 <td>' . $data['description'] . '</td>
@@ -40,11 +49,10 @@
                                                 <td>' . $data['quantity'] . '</td>
                                                 <td>' . $data['borrowed'] . '</td>
                                                 <td>
-                                                <input type="text" class="book_id" value=' . $data['id'] . ' hidden>
-                                                <input type="text" class="user_email" value=' . $_SESSION['email'] . ' hidden>
                                                 <button class="request" name=' . $data['id'] . ' value=' . $_SESSION['email'] . '>Request</button>
                                                 </form></td>
                                                 </tr>';
+                                                $i=$i+1;
                                         }
                                         echo '</table>';
                             echo"        

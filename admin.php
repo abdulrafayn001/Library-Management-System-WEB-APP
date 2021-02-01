@@ -18,6 +18,8 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="CSS/bookmanager_pannel.css">
     <link rel="stylesheet" href="CSS/pannel.css">
 
+
+
     <!-- JS -->
     <script src="JS/bookrequests.js"></script>
     <script src="JS/usermanager.js"></script>
@@ -144,8 +146,7 @@ if (!isset($_SESSION['email'])) {
                                 <th>Admin Email</th>
                             </tr>';
                         while ($info = mysqli_fetch_assoc($result)) {
-                            if($_SESSION['email']!=$info['email'])
-                            {
+                            if ($_SESSION['email'] != $info['email']) {
                                 echo '<tr>
                                 <td>' . $info['id'] . '</td>
                                 <td>' . $info['username'] . '</td>
