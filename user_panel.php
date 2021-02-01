@@ -31,10 +31,8 @@
     
 
     <script
-        type="text/javascript"
-    >
+        type="text/javascript">
          
-
         $(
             function()
             {

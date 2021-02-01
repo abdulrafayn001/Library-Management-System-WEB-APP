@@ -39,7 +39,7 @@
             $re = mysqli_query($con, $sqli);
             $y = mysqli_fetch_assoc($re);
             
-            if($y['quantity']!=$y['borrowed'])
+            if($y['quantity']!=0)
             {
                 $sql="SELECT *from book_request where user_id= ".$data['id']." and book_id= ".$_POST['book_id']."";
                 $res = mysqli_query($con, $sql);

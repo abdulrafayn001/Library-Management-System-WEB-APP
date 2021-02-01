@@ -18,10 +18,10 @@
             $result = mysqli_query($con,$sql);
             $result=mysqli_fetch_assoc($result);
 
-            
+
             if(empty($result))
             {
-                header('location:student_login.php');
+                header('location:student_login_form.php');
             }
             else
             {

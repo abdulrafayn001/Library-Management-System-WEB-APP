@@ -26,7 +26,9 @@
                 if (mysqli_query($con,$reg)) {
                     phpAlert("Registration Successful");
                     header("location:student_login_form.php");
-                } else {
+                } 
+                else
+                {
                     phpAlert("Registration Unsuccessful");
                 }
             }

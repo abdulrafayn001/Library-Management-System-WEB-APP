@@ -30,7 +30,9 @@ function SwitchCardTheme() {
     }
     if (document.getElementById("themeD").className == "log") {
         document.getElementById("themeD").setAttribute("class", "logS");
-    } else {
+    } 
+    else 
+    {
         if (document.getElementById("themeL").className == "quoteS") {
             document.getElementById("themeL").setAttribute("class", "quote");
         }

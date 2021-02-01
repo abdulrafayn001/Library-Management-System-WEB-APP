@@ -8,6 +8,7 @@ if(isset($_POST['rmRec']))
     {
         $sqlQuery = "DELETE FROM books where id=$id";        
         mysqli_query($con, $sqlQuery);
+
         header("location:bookmanager.php");
     }
     else
